@@ -1,0 +1,15 @@
+https://api.thegraph.com/subgraphs/name/bonkeydog/bancorgalaxy
+Query
+query trader($address: ID!){
+  trader(id: $address) {
+    id
+  }
+}
+
+Expression
+function(data) {
+  if (data == null || data.trader == null) {
+    return 0
+  }
+  return 1
+}
